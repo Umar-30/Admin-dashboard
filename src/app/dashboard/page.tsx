@@ -116,7 +116,7 @@ const AdminDashboard = () => {
             Swal.fire("Success","Your order has been completed", "success")
         }    
     }catch(_error) { 
-        console.error("Error changing order status:", error);
+        console.error("Error changing order status:", _error);
         Swal.fire("Error!", "Failed to change status", "error");
     }
     };
