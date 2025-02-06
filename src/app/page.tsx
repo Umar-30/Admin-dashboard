@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react'
 
-const adminLogin = () => {
+const AdminLogin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -51,4 +51,4 @@ const adminLogin = () => {
   )
 }
 
-export default adminLogin
+export default AdminLogin

@@ -2,6 +2,7 @@
 import ProtectedRoute from '@/app/components/ProtectedRoute';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
+import { error } from 'console';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import Swal from 'sweetalert2';
@@ -113,11 +114,10 @@ const AdminDashboard = () => {
                 Swal.fire("Order Dispatched!", "Order has been dispatched", "success")
             } else if(newStatus === "success") {
             Swal.fire("Success","Your order has been completed", "success")
-        }  else if (newStatus === "pending") { 
-            Swal.fire("Pending", "Your order is now pending", "info");
-        }  
-    }catch(error) {
-        Swal.fire("Error!", "Failed to change status", "error")
+        }    
+    }catch(_error) { 
+        console.error("Error changing order status:", error);
+        Swal.fire("Error!", "Failed to change status", "error");
     }
     };
   return (
