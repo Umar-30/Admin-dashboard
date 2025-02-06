@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    domains: ['cdn.sanity.io'], // Sanity images ke liye domain add karo
+  },
+};
 
-export default nextConfig;
+export default nextConfig; 
